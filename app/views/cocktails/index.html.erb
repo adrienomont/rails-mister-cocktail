@@ -1,0 +1,16 @@
+<div class="container text-center">
+    <h1>Cocktails</h1>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+            <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_margarita.jpg');">
+          <div class="card-category">Really good cocktails</div>
+          <div class="card-description">
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+        </div>
+       </div>
+      <% end %>
+    </div>
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-info" %>
+</div>

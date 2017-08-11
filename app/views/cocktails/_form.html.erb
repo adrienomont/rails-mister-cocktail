@@ -2,9 +2,12 @@
 
   <div class="form-inputs form-group">
     <%= f.input :name, placeholder: "Mojito" %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
   </div>
 
   <div class="form-actions">
+    <%= link_to 'Back', cocktails_path, class: "btn btn-danger" %>
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>
